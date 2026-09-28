@@ -13,7 +13,7 @@ export default defineRailway(() => {
     env: { BACKEND_INTERNAL_URL: preserve() },
   });
 
-  return project("TechFrame", {
+  return project("STK", {
     resources: [api, app, Postgres, postgresVolume3cN7],
   });
 });

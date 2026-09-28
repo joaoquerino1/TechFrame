@@ -1,11 +1,11 @@
 spring:
   application:
-    name: TechFrame-api
+    name: STK-api
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:default}
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/TechFrame}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/STK}
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:postgres}
 
@@ -54,10 +54,10 @@ springdoc:
 
 app:
   jwt:
-    secret: ${JWT_SECRET:TechFrame-secret-change-in-production-32ch}
+    secret: ${JWT_SECRET:STK-secret-change-in-production-32ch}
     expiracao-horas: 8
   empresa:
-    nome: ${EMPRESA_NOME:TechFrame Tecnologia Ltda}
+    nome: ${EMPRESA_NOME:STK Tecnologia Ltda}
     cnpj: ${EMPRESA_CNPJ:12.345.678/0001-90}
   cors:
     origens-permitidas: ${CORS_ORIGENS:http://localhost:4200}

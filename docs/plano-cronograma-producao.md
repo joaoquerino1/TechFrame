@@ -1,4 +1,4 @@
-# Plano — Cronograma de Produção (TechFrame)
+# Plano — Cronograma de Produção (STK)
 
 > Projeção da feature baseada no formulário "CRONOGRAMA DE PRODUÇÃO"
 > (doc "CONTROLE DE ORÇAMENTO - Página17"). Sem código ainda — este doc

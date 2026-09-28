@@ -6,7 +6,7 @@ test.describe('Autenticacao', () => {
     const erros = coletarErros(page);
 
     await page.goto('/');
-    await expect(page.getByRole('heading', { name: 'TechFrame' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'STK' })).toBeVisible();
     await expect(page.getByText('Sistema Logistico Interno')).toBeVisible();
 
     await page.getByRole('link', { name: /Entrar no Demo/i }).click();
@@ -25,7 +25,7 @@ test.describe('Autenticacao', () => {
 
   test('login invalido mostra mensagem de erro', async ({ page }) => {
     await page.goto('/login');
-    await page.getByLabel('Email').fill('admin@techframe.com');
+    await page.getByLabel('Email').fill('admin@STK.com');
     await page.getByLabel('Senha').fill('senha-errada');
     await page.getByRole('button', { name: /Entrar/ }).click();
 

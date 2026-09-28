@@ -2,7 +2,7 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: TechFrame
+      POSTGRES_DB: STK
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
@@ -10,7 +10,7 @@ services:
     ports:
       - "5433:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d TechFrame"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d STK"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -20,13 +20,13 @@ services:
       context: ./logistica-api
       dockerfile: Dockerfile
     environment:
-      DB_URL: jdbc:postgresql://db:5432/TechFrame
+      DB_URL: jdbc:postgresql://db:5432/STK
       DB_USER: postgres
       DB_PASSWORD: postgres
-      JWT_SECRET: ${JWT_SECRET:-TechFrame-secret-change-in-production-32ch}
+      JWT_SECRET: ${JWT_SECRET:-STK-secret-change-in-production-32ch}
       CORS_ORIGENS: http://localhost
       SPRING_PROFILES_ACTIVE: production
-      EMPRESA_NOME: TechFrame Tecnologia Ltda
+      EMPRESA_NOME: STK Tecnologia Ltda
       EMPRESA_CNPJ: 12.345.678/0001-90
     ports:
       - "8080:8080"

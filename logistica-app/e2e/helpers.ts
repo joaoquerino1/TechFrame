@@ -34,7 +34,7 @@ export function coletarErros(page: Page) {
   };
 }
 
-export async function fazerLogin(page: Page, email = 'admin@techframe.com', senha = 'demo12345') {
+export async function fazerLogin(page: Page, email = 'admin@STK.com', senha = 'demo12345') {
   await page.goto('/login');
   await page.getByLabel('Email').fill(email);
   await page.getByLabel('Senha').fill(senha);

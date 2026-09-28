@@ -2,7 +2,7 @@
 
 **Demo publica do Sistema de Gestão de Ativos e Inventarios** - Sistema logistico interno para gestao de ativos, controle de ponto e folha de hora.
 
-> Este e um repositorio de demonstracao com dados ficticios da empresa **TechFrame Tecnologia Ltda**.
+> Este e um repositorio de demonstracao com dados ficticios da empresa **STK Tecnologia Ltda**.
 > Mantem a mesma arquitetura do sistema de producao, mas com dados seguros para exposicao publica.
 
 **Stack:** Spring Boot 3.3 / Angular 18 / PostgreSQL 16 / Docker / Chart.js
@@ -13,20 +13,20 @@
 
 | Funcao | Email | Senha |
 |--------|-------|-------|
-| Administrador | `admin@techframe.com` | `demo12345` |
+| Administrador | `admin@STK.com` | `demo12345` |
 
 ---
 
 ## O Problema de Negocio
 
-A **TechFrame Tecnologia Ltda** e uma empresa de instalacoes eletricas e fibra optica que enfrentava os seguintes desafios:
+A **STK Tecnologia Ltda** e uma empresa de instalacoes eletricas e fibra optica que enfrentava os seguintes desafios:
 
 - **Perda de ferramentas e EPIs:** Sem controle de retirada/devolucao, equipamentos sumiam das obras
 - **Frota descontrolada:** Veiculos eram usados sem registro, manutencao atrasada passava despercebida
 - **Ponto manual:** Controle de jornada em planilha, sujeito a erros e fraudes
 - **Folha de hora demorada:** Geracao manual do documento legal exigido por lei
 
-O TechFrame resolve tudo isso em um sistema unico, acessivel via web e mobile.
+O STK resolve tudo isso em um sistema unico, acessivel via web e mobile.
 
 ---
 
@@ -58,7 +58,7 @@ O TechFrame resolve tudo isso em um sistema unico, acessivel via web e mobile.
 ## Arquitetura
 
 ```
-TechFrame/
+STK/
 ├── logistica-api/              # Backend Spring Boot
 │   ├── src/main/java/.../
 │   │   ├── controller/         # REST controllers
@@ -103,13 +103,13 @@ TechFrame/
 
 ```bash
 # Criar o banco
-psql -U postgres -c "CREATE DATABASE TechFrame"
+psql -U postgres -c "CREATE DATABASE STK"
 ```
 
 ### 2. Backend
 
 ```bash
-cd TechFrame
+cd STK
 cd logistica-api
 cp ../.env.example .env
 mvn spring-boot:run
@@ -153,7 +153,7 @@ O sistema sobe completo:
 | `DB_USER` | Usuario do banco | `postgres` |
 | `DB_PASSWORD` | Senha do banco | `...` |
 | `SPRING_PROFILES_ACTIVE` | Profile do Spring | `production` |
-| `EMPRESA_NOME` | Nome da empresa (PDF) | `TechFrame Tecnologia Ltda` |
+| `EMPRESA_NOME` | Nome da empresa (PDF) | `STK Tecnologia Ltda` |
 | `EMPRESA_CNPJ` | CNPJ da empresa (PDF) | `12.345.678/0001-90` |
 
 ---
@@ -173,7 +173,7 @@ O sistema sobe completo:
 
 O banco e populado automaticamente com:
 
-- **6 funcionarios** da TechFrame (admin, gestor, 4 operacionais)
+- **6 funcionarios** da STK (admin, gestor, 4 operacionais)
 - **20 ativos**: 4 veiculos, 8 ferramentas, 5 EPIs, 3 outros
 - **Historico de ponto** de agosto 2025 (21 dias uteis)
 - **Movimentacoes** de ativos (retiradas e devolucoes)

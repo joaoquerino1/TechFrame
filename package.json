@@ -1,7 +1,7 @@
 {
-  "name": "TechFrame",
+  "name": "STK",
   "private": true,
-  "description": "Railway Infrastructure-as-Code for the TechFrame project (.railway/railway.ts)",
+  "description": "Railway Infrastructure-as-Code for the STK project (.railway/railway.ts)",
   "devDependencies": {
     "railway": "latest"
   }

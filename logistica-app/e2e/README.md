@@ -5,7 +5,7 @@ End-to-end tests that exercise the real UI against a running stack.
 ## Against the local Docker stack
 
 ```bash
-docker compose up --build -d   # from the repo root (TechFrame/)
+docker compose up --build -d   # from the repo root (STK/)
 npm run test:e2e               # from logistica-app/
 ```
 
@@ -28,7 +28,7 @@ Every spec captures browser console errors, page errors, and failed/4xx/5xx
 requests and fails the test if any occur.
 
 Login credentials used by the tests come from the demo seed data
-(`V5__seed_demo_data.sql`): `admin@techframe.com` / `demo12345`.
+(`V5__seed_demo_data.sql`): `admin@STK.com` / `demo12345`.
 
 `test-results/` (artifacts) is gitignored.
 
